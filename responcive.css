@@ -1,0 +1,73 @@
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffefc;
+}
+
+/* Header */
+header {
+  height: 70px;
+  background-color: #413c53;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 80px;
+}
+
+/* Navbar desktop view */
+.navbar {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: rgb(46, 30, 223);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #413c53;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

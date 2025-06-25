@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - Pets At Home</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+
+    <div class="total-section">
+      <h2>Total: ₹<span id="total-amount">0</span></h2>
+      <button id="payNowBtn">Pay Now</button>
+    </div>
+
+    <div id="payment-options" style="display:none;">
+      <h3>Select Payment Method:</h3>
+      <button onclick="selectPayment('UPI')">UPI</button>
+      <button onclick="selectPayment('Cash on Delivery')">Cash on Delivery</button>
+      <button onclick="selectPayment('Debit Card')">Debit Card</button>
+    </div>
+
+    <div id="order-form" style="display:none;">
+      <h3>Enter Your Details</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Delivery Address" required>
+      <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <div id="order-success" style="display:none;">
+      <h2>🎉 Order Placed Successfully!</h2>
+      <p>Thank you for shopping with Pets At Home.</p>
+    </div>
+  </div>
+  <button onclick="goBackHome()" style="margin: 20px; padding: 10px 20px; font-size: 16px;">⬅ Back to Home</button>
+
+
+  <script src="cart.js"></script>
+  <script>
+  function goBackHome() {
+    window.location.href = "index.html"; // replace with your home page filename
+  }
+</script>
+
+</body>
+</html>

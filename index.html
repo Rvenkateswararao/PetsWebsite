@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- tittle     -->
+  <title>Pets At Home</title>
+
+  <!-- css file -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- responsive css file  -->
+   <!-- <link rel="stylesheet" href="responcive.css"> -->
+  <!-- favicon image -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+ 
+
+</head>
+<body>
+    <!-- header  -->
+
+<header>
+  <div class="logo">
+    <h1>Happy Paws 🐾</h1>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#Home">Home</a>
+    <a href="#Services">Services</a>
+    <a href="#About">About</a>
+    <a href="#Contact">Contact</a>
+    <a href="signup.html">Signup</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+
+    <!-- hero section 1 -->
+   
+  <section class="hero" id="Home">
+    <h1>Welcome to Happy Paws 🐾</h1>
+    <p>Your one-stop shop for pet love, care, and products!</p>
+    <a href="#shopnow"><button>Shop Now</button></a>
+  </section>
+
+  <!-- serivice section  -->
+
+   <section class="services" id="Services">
+  <h2>Our Services</h2>
+  <div class="service-container">
+
+    <div class="service-card">
+      <img src="images/pet_grooming.webp" alt="Grooming">
+      <h3>Pet Grooming</h3>
+      <p>Professional grooming to keep your pets clean and stylish.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/pet_vetarnarycare.jpg" alt="Vet">
+      <h3>Veterinary Care</h3>
+      <p>Expert vet services to keep your pet healthy and happy.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/pet_training.webp" alt="Training">
+      <h3>Pet Training</h3>
+      <p>Fun and effective training sessions for all breeds.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/pet_boarding.webp" alt="Boarding">
+      <h3>Pet Boarding</h3>
+      <p>Safe and cozy boarding while you're away.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- product + cart -------------------------------- -->
+<section class="products" id="shopnow">
+  <h2>Shop for Your Pets 🐾</h2>
+  <div class="product-container">
+
+    <div class="product-card">
+      <img src="images/dog_food.webp" alt="Pet Food">
+      <h3>Pet Food</h3>
+      <p>₹299</p>
+      <button onclick="addToCart({id: 1, name: 'Pet Food', price: 299, image: 'images/dog_food.webp'})">
+    Add to Cart
+  </button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/bone_toy.webp" alt="Bone Toy">
+      <h3>Bone Toy</h3>
+      <p>₹150</p>
+       <button onclick="addToCart({id: 2, name: 'Bone Toy', price: 150, image: 'images/bone_toy.webp'})">
+    Add to Cart
+  </button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/pet_cage.avif" alt="Pet Cage">
+      <h3>Pet Cage</h3>
+      <p>₹800</p>
+     <button onclick="addToCart({id: 3, name: 'Pet Cage', price: 800, image: 'images/pet_cage.avif'})">
+    Add to Cart
+  </button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/dog_chain.webp" alt="Dog Chain">
+      <h3>Pet Chain</h3>
+      <p>₹400</p>
+      <button onclick="addToCart({id: 4, name: 'Pet Chain', price: 400, image: 'images/dog_chain.webp'})">
+    Add to Cart
+  </button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/dog_shampoo.avif" alt="Dog Shampoo">
+      <h3>Pet Shampoo</h3>
+      <p>₹250</p>
+       <button onclick="addToCart({id: 5, name: 'Pet Shampoo', price: 250, image: 'images/dog_shampoo.avif'})">
+    Add to Cart
+  </button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/dog_dress.avif" alt="Dog Dress">
+      <h3>Pet Dress</h3>
+      <p>₹120</p>
+       <button onclick="addToCart({id: 6, name: 'Pet Dress', price: 120, image: 'images/dog_dress.avif'})">
+    Add to Cart
+  </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Simple Cart Section -->
+<!-- <section class="cart">
+  <h2>Your Cart 🛒</h2>
+  <ul id="cart-items"></ul>
+  <p><strong>Total: ₹<span id="total">0</span></strong></p>
+</section> -->
+
+<!-- about section  -->
+<section class="about" id="About">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>Happy Paws</strong> 🐾 – your one-stop pet destination! We are passionate pet lovers who aim to bring the best products and services to your furry friends. From grooming to healthy food, we provide top-quality care for pets of all kinds. Trust us to treat your pets like family. ❤️
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/pet_love.avif" alt="Pet Love">
+    </div>
+  </div>
+</section>
+
+<!-- contact section -------------- -->
+ <section class="contact" id="Contact">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><strong>📍 Address:</strong>  Madhapur, Hyderabad</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>📧 Email:</strong> happypaws@gmail.com</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- footr section  -->
+ <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Site Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#shopnow">Shop</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+      </div>
+    </div>
+
+  </div>
+  <p class="footer-copy">© 2025 Happy Paws. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
+
+  
+<script src="script.js"></script>
+</body>
+</html>
